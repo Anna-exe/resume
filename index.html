@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rosie</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQdTdwFCl3zBt9Lv8fUZkTze7caAgdcoY&callback=initMap" async defer></script>
+    <script> function initMap() {
+        var mapOptions = { center: new google.maps.LatLng(40.12150192260742, -100.45039367675781), zoom: 4 };
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(41.664891, -73.558659),
+            map: map, title: 'My location'
+        });}
+    </script>
 </head>
 <body>
     <header>
@@ -219,16 +228,6 @@
             </div>
         </div>
         <div id="map"></div>
-        <script> function initMap() {
-            var mapOptions = { center: new google.maps.LatLng(40.12150192260742, -100.45039367675781), zoom: 4 };
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.12150192260742, -100.45039367675781),
-                map: map, title: 'My location'
-            });
-                }
-                </script>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQdTdwFCl3zBt9Lv8fUZkTze7caAgdcoY&callback=initMap" async defer></script>
-</body>
+    </body>
 </html>
